@@ -6,7 +6,7 @@ void execute(Data *data)
 	char *str, *op;
 
 	instruction_t ops[] = {
-		{"push", push},{"pall", pall}
+		{"push", push},{"push", push_end},{"pall", pall}
 	};
 	op = strtok(data->line, " \n\t");
 	str = strtok(NULL, " \n\t");

@@ -36,7 +36,10 @@ void push(stack_t **stack, unsigned int line_number)
 	*stack = new_node;
 }
 
-
+void push_end(stack_t **stack, unsigned int line_number)
+{
+	push(stack,line_number);
+}
 void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *p = *stack;
