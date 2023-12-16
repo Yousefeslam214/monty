@@ -10,7 +10,6 @@ int main(int argc, char **argv)
 	size_t len = 0;
 	unsigned int line_number = 1;
 	FILE *file;
-
     if (argc != 2)
     {
         fprintf(stderr,  "USAGE: monty file\n");

@@ -6,7 +6,7 @@ void execute(Data *data)
 	char *str, *op;
 
 	instruction_t ops[] = {
-		{"push", push},{"push", push_end},{"pall", pall},{NULL, NULL}
+		{"push", push},{"pall", pall},{NULL, NULL}
 	};
 	op = strtok(data->line, " \n\t");
 	str = strtok(NULL, " \n\t");
@@ -31,3 +31,5 @@ void execute(Data *data)
 	fclose(data->file);
 	exit(EXIT_FAILURE);
 }
+
+

@@ -50,7 +50,7 @@ typedef struct data
 }Data;
 extern Data global_data;
 
-
+int is_digit(char *str, unsigned int line_number);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 void execute(Data *data);
 /* -------------- basic ops -------------*/
