@@ -34,7 +34,6 @@ void push(stack_t **stack, unsigned int line_number)
 		free(global_data.line);
 		exit(EXIT_FAILURE);
 	}
-	printf("%s\n",global_data.str);
 	is_digit(global_data.str, line_number);
 	
 	num = atoi(global_data.str);
