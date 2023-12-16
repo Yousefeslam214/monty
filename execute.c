@@ -14,9 +14,12 @@ void execute(Data *data)
 		return;
 	else if (op[0] == '#')
 		return;
-	if( strcmp("pall", ops[i].opcode) == 0)
+	if(data->line_number == 0)
 	{
-		i++;
+		if( strcmp("pall", ops[i].opcode) == 0)
+		{
+			
+		}
 	}
 	while (ops[i].opcode && op)
 	{
