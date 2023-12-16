@@ -10,7 +10,8 @@ void execute(Data *data)
 		{"push", push},{"pall", pall},
 		{"pall;", pall},{"pint", pint},
 		{"pint;", pint},{"pop",pop},
-		{"swap", swap},{NULL, NULL}
+		{"swap", swap},{"add", add},
+		{NULL, NULL},{"nop",nop}
 	};
 	/*
 	printf("data->line is : %s\n", data->line);
