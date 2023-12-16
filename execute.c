@@ -5,13 +5,12 @@ void execute(Data *data)
 	int i = 0;
 	char *str, *op ;
 
-
 	instruction_t ops[] = {
 		{"push", push},{"pall", pall},
 		{"pall;", pall},{"pint", pint},
 		{"pint;", pint},{"pop",pop},
-		{"swap", swap},{"add", add},
-		{NULL, NULL},{"nop",nop}
+		{"swap", swap},{"add", add},{"nop",nop},
+		{NULL, NULL}
 	};
 	/*
 	printf("data->line is : %s\n", data->line);
@@ -47,7 +46,6 @@ void execute(Data *data)
 	{
 		if (strcmp(op, ops[i].opcode) == 0)
 		{
-			
 				data->str = str ? str : "e";
 				ops[i].f(data->stack, data->line_number);
 				return;
@@ -55,7 +53,7 @@ void execute(Data *data)
 		i++;
 	}
 	fprintf(stderr, "L%u: unknown instruction %s\n", data->line_number, op);
-	/*free_stack(data->stack);*/
+	free_stack(data->stack);
 	free(data->line);
 	fclose(data->file);
 	exit(EXIT_FAILURE);

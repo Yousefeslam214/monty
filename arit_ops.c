@@ -14,7 +14,7 @@ void swap(stack_t **stack, unsigned int line_number)
 	if (!*stack || !(*stack)->next)
 	{
 		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
-		/*free_stack(global_data.stack);*/
+		free_stack(global_data.stack);
 		fclose(global_data.file);
 		free(global_data.line);
 		exit(EXIT_FAILURE);
@@ -37,7 +37,7 @@ void add(stack_t **stack, unsigned int line_number)
 	if (!cur || !cur->next)
 	{
 		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
-		/*free_stack(global_data.stack);*/
+		free_stack(global_data.stack);
 		fclose(global_data.file);
 		free(global_data.line);
 		exit(EXIT_FAILURE);

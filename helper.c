@@ -10,7 +10,7 @@ int is_digit(char *str, unsigned int line_number)
 		if (!isdigit(str[i]))
 			{
 				fprintf(stderr, "L%u: usage: push integer\n",line_number);
-				/*free_stack(global_data.stack);*/
+				free_stack(global_data.stack);
 				fclose(global_data.file);
 				free(global_data.line);
 				exit(EXIT_FAILURE);
@@ -32,4 +32,25 @@ char *clear_number_from_semicolon(char *number_string) {
   }
 
   return number_string;
+}
+
+
+/**
+ * free_stack - free all stack
+ * @top: stack
+ * Return:void
+ */
+void free_stack(stack_t **top)
+{
+	stack_t *cur = *top;
+
+	if (!*top || !top)
+		return;
+	while (cur)
+	{
+		*top = (*top)->next;
+		free(cur);
+		cur = *top;
+	}
+
 }

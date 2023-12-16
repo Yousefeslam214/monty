@@ -52,6 +52,7 @@ extern Data global_data;
 
 
 char *clear_number_from_semicolon(char *number_string);
+void free_stack(stack_t **top);
 
 int is_digit(char *str, unsigned int line_number);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
