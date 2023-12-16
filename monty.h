@@ -50,6 +50,9 @@ typedef struct data
 }Data;
 extern Data global_data;
 
+
+char *clear_number_from_semicolon(char *number_string);
+
 int is_digit(char *str, unsigned int line_number);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 void execute(Data *data);

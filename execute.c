@@ -3,13 +3,38 @@
 void execute(Data *data)
 {
 	int i = 0;
-	char *str, *op;
+	char *str, *op ;
+
 
 	instruction_t ops[] = {
-		{"push", push},{"pall", pall},{"pint", pint},{NULL, NULL}
+		{"push", push},{"pall", pall},{"pall;", pall},{"pint", pint},{"pint;", pint},{NULL, NULL}
 	};
+	/*
+	printf("data->line is : %s\n", data->line);
+	printf("op is : %s\n", op);
+	printf("data->line is len : %ld\n", strlen(data->line));
+	*/
+	
+	/*
+	if (strlen(data->line) > 10)
+	{
+		
+			
+			op = strtok(data->line, " \n\t");
+			str = strtok(NULL, " ;\n\t");
+			
+		while ((op = strtok(data->line, " \n\t"))!=NULL)
+		{
+			str = strtok(NULL, " ;\n\t");
+		}
+	}
+	else
+	{*/
 	op = strtok(data->line, " \n\t");
 	str = strtok(NULL, " \n\t");
+	/*}*/
+	if (str)
+		str = clear_number_from_semicolon(str);
 	if (op == NULL)
 		return;
 	else if (op[0] == '#')

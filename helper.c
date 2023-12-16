@@ -19,3 +19,17 @@ int is_digit(char *str, unsigned int line_number)
 	}
 	return 1;
 }
+
+
+char *clear_number_from_semicolon(char *number_string) {
+
+  /*// Use strchr to find the first occurrence of the semicolon*/
+  char *semicolon_pos = strchr(number_string, ';');
+
+  /*If a semicolon is found, replace it with a null terminator*/
+  if (semicolon_pos) {
+    *semicolon_pos = '\0';
+  }
+
+  return number_string;
+}
