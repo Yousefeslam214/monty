@@ -14,19 +14,12 @@ void execute(Data *data)
 		return;
 	else if (op[0] == '#')
 		return;
-	/*if(data->line_number == 0)
-	{
-		if( strcmp("pall", ops[i].opcode) == 0)
-		{
-			return;
-		}
-	}*/
 	while (ops[i].opcode && op)
 	{
 		if (strcmp(op, ops[i].opcode) == 0)
 		{
 			
-				data->str = str ? str : "";
+				data->str = str ? str : "e";
 				ops[i].f(data->stack, data->line_number);
 				return;
 		}
