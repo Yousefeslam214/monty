@@ -7,7 +7,10 @@ void execute(Data *data)
 
 
 	instruction_t ops[] = {
-		{"push", push},{"pall", pall},{"pall;", pall},{"pint", pint},{"pint;", pint},{NULL, NULL}
+		{"push", push},{"pall", pall},
+		{"pall;", pall},{"pint", pint},
+		{"pint;", pint},{"pop",pop},
+		{"swap", swap},{NULL, NULL}
 	};
 	/*
 	printf("data->line is : %s\n", data->line);
