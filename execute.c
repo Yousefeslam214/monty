@@ -9,7 +9,8 @@ void execute(Data *data)
 		{"push", push},{"pall", pall},
 		{"pall;", pall},{"pint", pint},
 		{"pint;", pint},{"pop",pop},
-		{"swap", swap},{"add", add},{"nop",nop},
+		{"swap", swap},{"add", add},
+		{"nop",nop},{"sub" ,sub},
 		{NULL, NULL}
 	};
 	/*
