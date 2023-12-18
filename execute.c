@@ -12,6 +12,10 @@ void execute(Data *data)
 		{"swap", swap},{"add", add},
 		{"nop",nop},{"sub" ,sub},
 		{"div", _div},
+		{"swap", swap}, {"add", add},
+		{"mul", mul},
+		{"mod", mod}, {"rotl", rotl},
+		{"rotr", rotr}, {"pop", pop},
 		{NULL, NULL}
 	};
 	/*
