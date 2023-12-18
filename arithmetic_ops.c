@@ -14,8 +14,7 @@ void sub(stack_t **stack, unsigned int line_number)
 		free(global_data.line);
 		exit(EXIT_FAILURE);
 	}
-
-    sub = (*stack)->n;
+    sub = ((*stack)->next->n) - (*stack)->n;
     (*stack) = (*stack)->next;
     (*stack)->n = sub;
     free(cur);
